@@ -1,70 +1,55 @@
-###################
-What is CodeIgniter
-###################
+In this directory you can find All files regarding given tasks (/smooth-commerce-test)
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+This RESTful Api created in PHP's codeigniter framework.
 
-*******************
-Release Information
-*******************
+Below is the list of APIs which perform given task to Add/Update/Delete operations in Products and Categories
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+1.Task:list all products
+URL: /smooth-commerce-test/api/Products/
+Method: GET
 
-**************************
-Changelog and New Features
-**************************
+2.Task:retrieve a single product
+URL: /smooth-commerce-test/api/Products/getSingleProduct
+Method: POST
+Parameters:
+{
+	"product_id":9
+}
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+3.Task:create a product
+URL: /smooth-commerce-test/api/Products/add
+Method: POST
+Parameters:
+{
+	"name":Muo Guo",
+	"category":"Potato",
+	"sku":"CC",
+	"price":"20.25"
+}
 
-*******************
-Server Requirements
-*******************
+4.Task:Delete a product
+URL: /smooth-commerce-test/api/Products/delete
+Method: POST
+Parameters:
+{
+	"product_id":8
+}
 
-PHP version 5.6 or newer is recommended.
+5.Task: Allow the API users to update one or more attributes of a product at once
+  Task: Allow the API users to update all attributes of a product at once (i.e., replace a product)
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+URL: /smooth-commerce-test/api/Products/update
+Method: POST
+Parameters:
+{
+	"name":"Guo",
+	"category":"Ethiopia,Meat",
+	"sku":"AA"
+	"price":"10.25","product_id":9
+}
 
-************
-Installation
-************
+6.Task:list all product categories
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+URL: /smooth-commerce-test/api/Category/
+Method: GET
+Parameters:
